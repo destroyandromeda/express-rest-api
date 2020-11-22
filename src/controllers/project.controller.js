@@ -4,7 +4,6 @@ const get = async (req, res) => {
 
     try {
         const projects = await Project.findAll()
-        console.log(projects)
         res.json({
             data: projects
         })

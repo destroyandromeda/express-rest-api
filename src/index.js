@@ -20,6 +20,9 @@ if (process.env.MODE === 'production') {
         }
 
         cluster.on('exit', (worker, code, signal) => {
+            console.log(
+                `Worker ${worker.id} finished. Exit code: ${code}`
+            )
             main()
                 .then(() => console.log(`Server on worker ${process.pid} restart`))
         })

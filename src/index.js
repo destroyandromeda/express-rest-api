@@ -20,7 +20,8 @@ if (process.env.MODE === 'production') {
         }
 
         cluster.on('exit', (worker, code, signal) => {
-            console.log(`worker ${worker.process.pid} died`)
+            main()
+                .then(() => console.log(`Server on worker ${process.pid} restart`))
         })
     } else {
         // Workers can share any TCP connection

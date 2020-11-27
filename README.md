@@ -1,14 +1,14 @@
 # express-rest-api
 
-skeleton of express rest api app
+skeleton app on NodeJS
 <pre>
 1)Express
 2)sequelize ORM
 3)Postgres DB
 </pre>
 
-##Start project
-####Create new .env file based on .env.example and fill it
+## Start project
+#### Create new .env file based on .env.example and fill it
 
 <pre>
 <p><strong>npm i</strong>                       <small>//Install dependencies</small></p>
@@ -18,7 +18,7 @@ skeleton of express rest api app
 <p><strong>npm run dev</strong>                 <small>//Run project</small></p>
 </pre>
 
-###Routes
+### Routes
 all routes start at /api
 
 ### Create migration

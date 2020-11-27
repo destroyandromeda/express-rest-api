@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "pre-migrate": "node -r dotenv/config src/database/createDB.js",
     "dev": "nodemon -r dotenv/config src/index.js --exec babel-node",
     "build": "babel src --out-dir dist",
     "start": "node -r dotenv/config dist/index.js"

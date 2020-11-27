@@ -1,4 +1,4 @@
-import Project from "../models/Project"
+import Project from "../models/project"
 
 const get = async (req, res) => {
 
@@ -13,8 +13,8 @@ const get = async (req, res) => {
 }
 
 const create = async (req, res) => {
-    const {name, priority, description, deliverydate} = req.body
-    if(!name && !priority && !deliverydate){
+    const {name, priority, description, delivery_date} = req.body
+    if(!name && !priority && !delivery_date){
         res.status(400).json({
             message: 'Send all req field',
             data: {}
@@ -25,9 +25,9 @@ const create = async (req, res) => {
             name,
             priority,
             description,
-            deliverydate
+            delivery_date
         }, {
-            fields: ['name', 'priority', 'description', 'deliverydate']
+            fields: ['name', 'priority', 'description', 'delivery_date']
         })
         if (newProject) {
             return res.json({
@@ -79,7 +79,7 @@ const del = async (req, res) => {
 
 const upd = async (req, res) => {
     const {id} = req.params
-    const {name, priority, description, deliverydate} = req.body
+    const {name, priority, description, delivery_date} = req.body
     try {
 
         const project = await Project.findOne({
@@ -99,7 +99,7 @@ const upd = async (req, res) => {
                 name,
                 priority,
                 description,
-                deliverydate
+                delivery_date
             })
         }
 

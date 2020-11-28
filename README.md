@@ -23,3 +23,26 @@ all routes start at /api
 
 ### Create migration
 npx sequelize migration:generate --name %Name%
+
+
+## Structure 
+<pre>
+src
+ ┣ controllers
+ ┃ ┗ *.controller.js
+ ┣ database
+ ┃ ┣ migrations
+ ┃ ┃ ┗ *.js
+ ┃ ┣ seeders
+ ┃ ┃ ┗ *.js
+ ┃ ┣ config.js
+ ┃ ┣ createDB.js
+ ┃ ┗ database.js
+ ┣ models
+ ┃ ┗ *.js
+ ┣ routes
+ ┃ ┣ index.js
+ ┃ ┗ *.js
+ ┣ app.js
+ ┗ index.js
+</pre>
